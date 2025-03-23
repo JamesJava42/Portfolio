@@ -1,0 +1,58 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: default;
+
+  /* Default Style */
+  background-color: #e2e8f0;
+  color: #1e293b;
+
+  /* Technology Specific Colors */
+  &.aws {
+    background-color: #ff9900;
+    color: #ffffff;
+  }
+
+  &.gcp {
+    background-color: #4285f4;
+    color: #ffffff;
+  }
+
+  &.kubernetes {
+    background-color: #326ce5;
+    color: #ffffff;
+  }
+
+  &.docker {
+    background-color: #2496ed;
+    color: #ffffff;
+  }
+
+  &.spring {
+    background-color: #6db33f;
+    color: #ffffff;
+  }
+
+  &.angular {
+    background-color: #dd0031;
+    color: #ffffff;
+  }
+}
+
+/* Dark Mode */
+.dark {
+  :host {
+    background-color: #334155;
+    color: #f8fafc;
+
+    /* Override default in dark mode */
+    &.aws, &.gcp, &.kubernetes, &.docker, &.spring, &.angular {
+      color: #ffffff;
+    }
+  }
+}

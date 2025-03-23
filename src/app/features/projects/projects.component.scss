@@ -1,0 +1,42 @@
+.projects-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1e293b;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Dark Mode */
+.dark {
+  .projects-section {
+    background-color: #0f172a;
+
+    .section-title {
+      color: #f8fafc;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem 0.5rem;
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

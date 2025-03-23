@@ -1,0 +1,26 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+  
+    .main-content {
+      flex: 1;
+      padding: 2rem 1rem;
+    }
+  }
+  
+  /* Dark Mode */
+  .dark {
+    .app-container {
+      background-color: #0f172a;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 1rem 0.5rem;
+    }
+  }

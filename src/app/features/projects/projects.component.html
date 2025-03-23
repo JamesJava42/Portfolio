@@ -1,0 +1,16 @@
+<!-- src/app/features/projects/projects.component.html -->
+<section class="projects-section">
+  <h2 class="section-title">Featured Projects</h2>
+  
+  <div class="projects-grid">
+    <app-project-card 
+      *ngFor="let project of projects$ | async"
+      [project]="project"
+      class="project-item">
+    </app-project-card>
+  </div>
+
+  <div *ngIf="!(projects$ | async)?.length" class="no-projects">
+    <p>No projects found. Please check the data source.</p>
+  </div>
+</section>

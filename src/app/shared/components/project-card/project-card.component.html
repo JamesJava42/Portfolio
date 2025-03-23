@@ -1,0 +1,27 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title>{{ project.name }}</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <ul class="description-list">
+      <li *ngFor="let desc of project.description">{{ desc }}</li>
+    </ul>
+    
+    <div class="skill-chips">
+      <app-skill-chip 
+        *ngFor="let tag of techTags" 
+        [skill]="tag">
+      </app-skill-chip>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions *ngIf="project.githubLink">
+    <a mat-button color="primary" 
+       [href]="project.githubLink" 
+       target="_blank"
+       rel="noopener">
+      View Code
+    </a>
+  </mat-card-actions>
+</mat-card>

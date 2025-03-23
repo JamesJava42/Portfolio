@@ -1,0 +1,34 @@
+.experience-section {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+  
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: #1e293b;
+    }
+  }
+  
+  /* Dark Mode */
+  .dark {
+    .experience-section {
+      background-color: #0f172a;
+  
+      .section-title {
+        color: #f8fafc;
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 2rem 0.5rem;
+  
+      .section-title {
+        font-size: 1.75rem;
+      }
+    }
+  }

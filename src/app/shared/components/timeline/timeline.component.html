@@ -1,0 +1,14 @@
+<div class="timeline-container">
+  <div *ngFor="let item of items; let last = last" 
+       class="timeline-item"
+       [class.last-item]="last">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <h3 class="timeline-title">{{ item.title }}</h3>
+      <p class="timeline-duration">{{ item.duration }}</p>
+      <ul class="timeline-description">
+        <li *ngFor="let desc of item.description">{{ desc }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

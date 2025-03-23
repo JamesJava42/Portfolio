@@ -1,0 +1,11 @@
+<section class="hero-section">
+  <div class="content-container">
+    <h1 class="hero-title">{{ (resumeData$ | async)?.personalInformation?.name }}</h1>
+    <p class="hero-subtitle">{{ (resumeData$ | async)?.aboutMe }}</p>
+    <div class="cta-buttons">
+      <a mat-raised-button color="primary" href="/assets/pdf/Rakesh_Reddy_Mareddy.pdf" download>
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
