@@ -1,4 +1,33 @@
 <section class="experience-section">
-    <h2 class="section-title">Professional Experience</h2>
-    <app-timeline [items]="experience$ | async"></app-timeline>
-  </section>
+  <h2 class="section-title">Professional Experience</h2>
+  
+  <div class="experience-list">
+    <mat-card *ngFor="let exp of experience$ | async" class="experience-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar class="experience-icon">{{exp.icon}}</mat-icon>
+        <mat-card-title>{{exp.title}}</mat-card-title>
+        <mat-card-subtitle>
+          <span class="company">{{exp.company}}</span>
+          <span class="duration">{{exp.duration}}</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-content>
+        <div class="skill-chips">
+          <mat-chip *ngFor="let skill of exp.skills" color="primary" selected>
+            {{skill}}
+          </mat-chip>
+        </div>
+
+        <ul class="responsibilities">
+          <li *ngFor="let item of exp.description">
+            <mat-icon class="bullet-icon">chevron_right</mat-icon>
+            {{item}}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

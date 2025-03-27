@@ -1,16 +1,24 @@
-<!-- src/app/features/projects/projects.component.html -->
-<section class="projects-section">
-  <h2 class="section-title">Featured Projects</h2>
-  
-  <div class="projects-grid">
-    <app-project-card 
-      *ngFor="let project of projects$ | async"
-      [project]="project"
-      class="project-item">
-    </app-project-card>
-  </div>
+<div class="projects-container">
+  <h2 class="main-title">Projects</h2>
 
-  <div *ngIf="!(projects$ | async)?.length" class="no-projects">
-    <p>No projects found. Please check the data source.</p>
+  <div class="project-list">
+    <mat-card *ngFor="let project of projects$ | async" class="project-card">
+      <mat-card-header class="card-header">
+        <span class="project-title">{{ project.title }}</span>
+        <a [href]="project.link" target="_blank" class="view-project">
+          <mat-icon>launch</mat-icon>
+        </a>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+        <mat-divider></mat-divider>
+        <div class="tech-stack">
+          <mat-chip *ngFor="let tech of project.technologies" class="chip">
+            {{ tech }}
+          </mat-chip>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-</section>
+</div>

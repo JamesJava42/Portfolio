@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map, retry } from 'rxjs/operators';
 
 export interface PersonalInformation {
   name: string;
@@ -14,7 +14,7 @@ export interface PersonalInformation {
 export interface Project {
   name: string;
   description: string[];
-  techStack?: string[];
+  techStack?: string[]; // Can be an array or undefined
   githubLink?: string;
   demoLink?: string;
 }
@@ -50,10 +50,10 @@ export class ResumeService {
 
   getResumeData(): Observable<Resume> {
     return this.http.get<Resume>(this.DATA_URL).pipe(
+      retry(3), // Retries the request 3 times in case of a transient error
       map(data => this.validateResume(data)),
       catchError(error => {
         console.error('Error loading resume data:', error);
-        // Return empty fallback data
         return of({
           personalInformation: { name: '', email: '', linkedin: '', github: '', website: '' },
           aboutMe: '',
@@ -66,6 +66,7 @@ export class ResumeService {
       })
     );
   }
+
   private validateResume(data: unknown): Resume {
     const requiredKeys = [
       'personalInformation',
@@ -78,6 +79,7 @@ export class ResumeService {
     ];
 
     if (!data || typeof data !== 'object' || !requiredKeys.every(key => key in data)) {
+      console.error('Invalid resume data structure');
       throw new Error('Invalid resume data structure');
     }
 

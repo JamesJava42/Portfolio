@@ -1,22 +1,42 @@
-<mat-toolbar class="navbar">
-  <div class="container">
-    <a routerLink="/" class="logo">Rakesh Reddy</a>
-    
-    <nav class="desktop-nav">
-      <a *ngFor="let link of navLinks" 
-         mat-button 
+<!-- navbar.component.html -->
+<mat-toolbar  class="fixed-nav">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+      <span>Rakesh M</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-links">
+      <a mat-button 
+         *ngFor="let link of navLinks"
          [routerLink]="link.path"
-         routerLinkActive="active-link">
+         routerLinkActive="active">
         {{ link.label }}
       </a>
     </nav>
-    
-    <div class="actions">
-      <button mat-icon-button (click)="toggleTheme()">
-        <mat-icon>
-          {{ themeService.isDark() ? 'dark_mode' : 'light_mode' }}
-        </mat-icon>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.open]="menuOpen">
+      <button mat-icon-button 
+              (click)="toggleMenu()"
+              class="menu-button">
+        <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
       </button>
+      
+      <div class="mobile-links" *ngIf="menuOpen">
+        <a mat-button 
+           *ngFor="let link of navLinks"
+           [routerLink]="link.path"
+           (click)="closeMenu()">
+          {{ link.label }}
+        </a>
+      </div>
     </div>
   </div>
 </mat-toolbar>
+
+<!-- Content Wrapper -->
+<div class="content-wrapper">
+  <router-outlet></router-outlet>
+</div>

@@ -1,34 +1,145 @@
 .experience-section {
-    padding: 4rem 1rem;
-    background-color: #ffffff;
-  
+  padding: 4rem 1rem;
+  background: linear-gradient(145deg, #408edc 0%, #4489e3 100%);
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1e293b;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      border-radius: 2px;
+    }
+  }
+
+  .experience-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    background-color: #334155;
+  }
+
+  .experience-card {
+    border-radius: 12px !important;
+    overflow: hidden;
+    background-color: #b0b1d9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .experience-icon {
+      background: #3b82f6;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 32px;
+    }
+
+    .company {
+      font-weight: 600;
+      color: #3b82f6;
+      font-size: 1.1rem;
+    }
+
+    .duration {
+      color: #64748b;
+      margin-left: 1rem;
+    }
+
+    .skill-chips {
+      margin: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      mat-chip {
+        font-weight: 500;
+      }
+    }
+
+    .responsibilities {
+      padding-left: 1.5rem;
+      list-style: none;
+
+      li {
+        margin: 0.75rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        line-height: 1.6;
+
+        .bullet-icon {
+          color: #3b82f6;
+          font-size: 1.2rem;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+.dark {
+  .experience-section {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+
     .section-title {
-      text-align: center;
+      color: #f8fafc;
+
+      &::after {
+        background: #60a5fa;
+      }
+    }
+
+    .experience-card {
+      background: #1e293b;
+
+      .company {
+        color: #60a5fa;
+      }
+
+      .duration {
+        color: #94a3b8;
+      }
+
+      mat-chip {
+        background: #334155 !important;
+        color: #94a3b8 !important;
+      }
+
+      .bullet-icon {
+        color: #60a5fa;
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 2rem 0.5rem;
+
+    .section-title {
       font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 3rem;
-      color: #1e293b;
+    }
+
+    .experience-card {
+      margin: 0 -0.5rem;
     }
   }
-  
-  /* Dark Mode */
-  .dark {
-    .experience-section {
-      background-color: #0f172a;
-  
-      .section-title {
-        color: #f8fafc;
-      }
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .experience-section {
-      padding: 2rem 0.5rem;
-  
-      .section-title {
-        font-size: 1.75rem;
-      }
-    }
-  }
+}

@@ -1,91 +1,88 @@
 {
-    "personalInformation": {
-      "name": "Rakesh Reddy M",
-      "email": "mreddy3@toromail.csudh.edu",
-      "linkedin": "linkedin.com/in/rakesh-reddy-51588a202",
-      "github": "github.com/JamesJava42",
-      "website": "https://resumerakesh.vercel.app (desktop)"
+  "personalInformation": {
+    "name": "Rakesh Reddy M",
+    "email": "mreddy3@toromail.csudh.edu",
+    "linkedin": "linkedin.com/in/rakesh-reddy-51588a202",
+    "github": "github.com/JamesJava42",
+    "website": "https://resumerakesh.vercel.app"
+  },
+  "aboutMe": "Experienced Backend Developer with expertise in full-stack development, cloud computing, DevOps, and product development. Currently pursuing an MS in computer science at California State University, Dominguez Hills (CSUDH). Passionate about research and development (R&D) and eager to contribute to cutting-edge projects.",
+  "projects": [
+    {
+      "name": "Microservices-based E-Commerce",
+      "description": [
+        "Designed and implemented user authentication using OAuth2, ensuring secure role-based access control.",
+        "Deployed the platform on AWS EC2, utilizing Elastic Load Balancer (ELB) for distributing traffic, and Amazon RDS for relational database management.",
+        "Leveraged AWS S3 for static asset storage and AWS CloudWatch for performance monitoring and logging.",
+        "Integrated GCP services, including Google Pub/Sub for event-driven messaging and Google Cloud Storage for storing large datasets.",
+        "Orchestrated containerized microservices using Docker and Kubernetes, ensuring scalability and fault tolerance.",
+        "Automated deployment workflows using CI/CD pipelines with Jenkins and Bitbucket, ensuring continuous integration and streamlined updates."
+      ],
+      "techStack": ["Java", "Spring Boot", "AWS", "Docker", "Kubernetes", "CI/CD", "GCP"],
+      "githubLink": "https://github.com/JamesJava42/microservices-ecommerce",
+      "demoLink": "https://ecommerce-demo.com"
     },
-    "aboutMe": "Experienced Backend Developer expertise in the technologies in full-stack development, cloud computing, DevOps, Product Development. Currently pursuing an MS in computer science at California State University, Dominguez Hills (CSUDH), I am focus and more passionate in research and development (R&D) and eager to contribute to cutting-edge projects.",
-    "projects": [
-      {
-        "name": "Microservices-based E-Commerce",
-        "description": [
-          "Designed and implemented user authentication and authorization using OAuth2, ensuring secure role-based access control.",
-          "Deployed the platform on AWS EC2, utilizing Elastic Load Balancer (ELB) for distributing traffic, and Amazon RDS for relational database management.",
-          "Leveraged AWS S3 for static asset storage and AWS CloudWatch for performance monitoring and logging.",
-          "Integrated GCP services, including Google Pub/Sub for event-driven messaging and Google Cloud Storage for storing large datasets.",
-          "Orchestrated containerized microservices using Docker and Kubernetes, ensuring scalability and fault tolerance.",
-          "Automated deployment workflows using CI/CD pipelines with Jenkins and Bitbucket, ensuring continuous integration and streamlined updates."
-        ]
-      },
-      {
-        "name": "EVENT-DRIVEN INVENTORY MANAGEMENT SYSTEM",
-        "description": [
-          "Deployed the system on AWS EC2, leveraging Docker for containerization and Kubernetes for orchestration to ensure scalability, fault tolerance, and high availability.",
-          "Integrated JWT for secure authentication and authorization, providing role-based access to the inventory management system.",
-          "Optimized database performance using Spring Data JPA, ensuring efficient handling of stock updates and reducing latency.",
-          "Developed and managed RESTful APIs for reliable communication between services, ensuring efficient data exchange and scalability."
-        ]
-      },
-      {
-        "name": "KAB UNIVERSITY PROFESSOR RESEARCH PROFILE APPLICATION",
-        "description": [
-          "Working as a Lead Developer for professor profile management system with secure OAuth2-based authentication and role-based access control, ensuring data security and controlled access.",
-          "Involve in upgrading the real-time search and filtering feature for professor profiles based on research areas, utilizing Spring Boot for backend services and Angular for a user-friendly frontend interface.",
-          "Deployed the product on AWS EC2, leveraging Docker and Kubernetes, ensuring scalability and high availability.",
-          "Architected and optimized a MySQL database schema to store professor research details and publications, enhancing query performance and ensuring data consistency."
-        ]
-      }
-    ],
-    "experience": [
-      {
-        "title": "Technical Developer | CSUDH",
-        "duration": "2023 - Present",
-        "description": [
-          "I collaborated with clients to design, build, and test applications to ensure that the custom functionality met their business needs.",
-          "Led project work and sprints using Agile practices and JIRA, ensuring open communication and transparency across the project life cycle.",
-          "Manage the controlled versions and repositories using Git, enabling easy team collaboration and a structured approach to the code.",
-          "Ensured software quality using strict testing procedures that included unit, integration, and user acceptance testing (UAT)",
-          "coordinated frequent software releases and bug fixing to surpass user expectations and meet business needs."
-        ]
-      },
-      {
-        "title": "Backend Developer | Vanna Infotech",
-        "duration": "2021-2023",
-        "description": [
-          "Developed and released scalable microservices using Spring MVC, Spring Boot, Go, Java, Python, Docker, Kubernetes, and Apache Kafka to provide high availability, scalability, and easy interaction between distributed systems.",
-          "Implemented $Cl/CD$ processes using automation tools such as Jenkins, GitLab CI, Bitbucket, and Azure DevOps to dramatically shorten deployment time and testing using Infrastructure as Code (laC) via Terraform.",
-          "Improved application security using OAuth2, JWT, SAML, and role-based access control (RBAC), combined with the use of firewalls, VPNs, and IDS to secure APIs",
-          "Improved application performance using complex SQL queries, Spring Data JPA, and Redis to support coaching, hence speeding up processing of data and improving application scalability.",
-          "Experienced in using PostgreSQL, MySQL, and MongoDB to support varied requirements of data.",
-          "Improved software quality using test-driven development (TDD) and automation using JUnit, Mockito, Selenium, and Cucumber frameworks to enhance test efficacy and coverage.",
-          "Implemented interactive components based on design principles, cognitive task analysis (CTA), and Figma for UI/UX design.",
-          "Worked in collaboration with cross-functional groups of front-end developers, designers, and DevOps engineers to provide functionality using Agile (Scrum) methodologies."
-        ]
-      }
-    ],
-    "certifications": [
-      "Certified Kubernetes Application Developer (CKAD)",
-      "AWS Certified Developer - Associate",
-      "Google Cloud Digital Leader Certification",
-      "Advanced Java Programming & Spring Framework",
-      "MySQL Database Management System (DBMS)"
-    ],
-    "skills": {
-      "cloudPlatforms": "AWS (EC2, S3, Lambda, CloudFormation, Elastic Beanstalk, CloudWatch), GCP (Cloud Pub/Sub, Fire store), RDS",
-      "developmentPractices": "Agile, Scrum, DevOps, CI/CD Tools, TDD",
-      "programmingLanguages": "Java, JavaScript, Python, C, C++",
-      "frameworksDBMS": "Spring Boot, AngularJS, Spring Security, Node.js : MySQL, MongoDB, PostgreSQL, Redis (caching), Elasticsearch (search indexing)",
-      "containerization": "Docker, Kubernetes, Helm (for Kubernetes configuration), OpenShift",
-      "testingTools": "Selenium, Cucumber, Postman, Junit, Mockito, SonarQube",
-      "apiDevelopment": "RESTful APIs, Swagger Documentation",
-      "messageBrokering": "Apache Kafka, RabbitMQ, Amazon SQS"
-    },
-    "education": {
-      "degree": "MS.Computer Science",
-      "university": "California State University Dominguez Hills",
-      "gpa": "3.6*",
-      "duration": "2023-2025"
+    {
+      "name": "EVENT-DRIVEN INVENTORY MANAGEMENT SYSTEM",
+      "description": [
+        "Deployed the system on AWS EC2, leveraging Docker for containerization and Kubernetes for orchestration to ensure scalability, fault tolerance, and high availability.",
+        "Integrated JWT for secure authentication and authorization, providing role-based access to the inventory management system.",
+        "Optimized database performance using Spring Data JPA, ensuring efficient handling of stock updates and reducing latency.",
+        "Developed and managed RESTful APIs for reliable communication between services, ensuring efficient data exchange and scalability."
+      ],
+      "techStack": ["Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "JWT", "JPA"],
+      "githubLink": "https://github.com/JamesJava42/inventory-management",
+      "demoLink": "https://inventory-demo.com"
     }
-  }
+  ],
+  "experience": [
+    {
+      "title": "Technical Developer",
+      "duration": "2023 - Present",
+      "description": [
+        "Collaborated with clients to design, build, and test applications to ensure custom functionality met their business needs.",
+        "Led project work and sprints using Agile practices and JIRA, ensuring open communication and transparency across the project lifecycle.",
+        "Managed controlled versions and repositories using Git, enabling easy team collaboration and a structured approach to the code.",
+        "Ensured software quality using strict testing procedures, including unit, integration, and user acceptance testing (UAT).",
+        "Coordinated frequent software releases and bug fixing to surpass user expectations and meet business needs."
+      ]
+    },
+    {
+      "title": "Backend Developer | Vanna Infotech",
+      "duration": "2021-2023",
+      "description": [
+        "Developed and released scalable microservices using Spring MVC, Spring Boot, Go, Java, Python, Docker, Kubernetes, and Apache Kafka to provide high availability, scalability, and easy interaction between distributed systems.",
+        "Implemented $Cl/CD$ processes using automation tools such as Jenkins, GitLab CI, Bitbucket, and Azure DevOps to dramatically shorten deployment time and testing using Infrastructure as Code (laC) via Terraform.",
+        "Improved application security using OAuth2, JWT, SAML, and role-based access control (RBAC), combined with the use of firewalls, VPNs, and IDS to secure APIs",
+        "Improved application performance using complex SQL queries, Spring Data JPA, and Redis to support coaching, hence speeding up processing of data and improving application scalability.",
+        "Experienced in using PostgreSQL, MySQL, and MongoDB to support varied requirements of data.",
+        "Improved software quality using test-driven development (TDD) and automation using JUnit, Mockito, Selenium, and Cucumber frameworks to enhance test efficacy and coverage.",
+        "Implemented interactive components based on design principles, cognitive task analysis (CTA), and Figma for UI/UX design.",
+        "Worked in collaboration with cross-functional groups of front-end developers, designers, and DevOps engineers to provide functionality using Agile (Scrum) methodologies."
+      ]
+    }
+  ],
+  "skills": {
+    "cloudPlatforms": ["AWS (EC2, S3, Lambda, CloudFormation, Elastic Beanstalk, CloudWatch)", "GCP (Cloud Pub/Sub, Firestore)", "RDS"],
+    "developmentPractices": ["Agile", "Scrum", "DevOps", "CI/CD Tools", "TDD"],
+    "programmingLanguages": ["Java", "JavaScript", "Python", "C", "C++"],
+    "frameworksDBMS": ["Spring Boot", "AngularJS", "Spring Security", "Node.js", "MySQL", "MongoDB", "PostgreSQL", "Redis (caching)", "Elasticsearch (search indexing)"],
+    "containerization": ["Docker", "Kubernetes", "Helm", "OpenShift"],
+    "testingTools": ["Selenium", "Cucumber", "Postman", "Junit", "Mockito", "SonarQube"],
+    "apiDevelopment": ["RESTful APIs", "Swagger Documentation"],
+    "messageBrokering": ["Apache Kafka", "RabbitMQ", "Amazon SQS"]
+  },
+  "education": {
+    "degree": "MS Computer Science",
+    "university": "California State University Dominguez Hills",
+    "gpa": "3.6",
+    "duration": "2023-2025"
+  },
+  "certifications": [
+    "Certified Kubernetes Application Developer (CKAD)",
+    "AWS Certified Developer - Associate",
+    "Google Cloud Digital Leader Certification",
+    "Advanced Java Programming & Spring Framework",
+    "MySQL Database Management System (DBMS)"
+  ]
+}

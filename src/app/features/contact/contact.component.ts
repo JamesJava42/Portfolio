@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,8 +13,11 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
-  ],  templateUrl: './contact.component.html',
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule
+  ],
+  templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
