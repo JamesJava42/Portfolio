@@ -1,58 +1,70 @@
+/* src/app/shared/components/skill-chip/skill-chip.component.scss */
 :host {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.2s;
+  padding: 0.4rem 1rem; /* Adjusted padding */
+  border-radius: 8px; /* Adjusted border radius */
+  font-size: 0.9rem; /* Adjusted font size */
+  font-weight: 500; /* Adjusted font weight */
+  transition: all 0.2s ease-in-out;
   cursor: default;
+  border: 1px solid transparent; /* Added border */
+}
 
-  /* Default Style */
-  background-color: #e2e8f0;
-  color: #1e293b;
+/* Default Style */
+:host {
+  background-color: #e5e7eb; /* Lighter background */
+  color: #374151; /* Darker text */
+}
 
-  /* Technology Specific Colors */
-  &.aws {
-    background-color: #ff9900;
-    color: #ffffff;
-  }
+/* Technology Specific Colors */
+:host.aws {
+  background-color: #ffedd5; /* Lighter AWS orange */
+  color: #78350f; /* Darker text */
+  border-color: #fb923c; /* Border for emphasis */
+}
 
-  &.gcp {
-    background-color: #4285f4;
-    color: #ffffff;
-  }
+:host.gcp {
+  background-color: #dbeafe; /* Lighter GCP blue */
+  color: #1e3a8a;
+  border-color: #60a5fa;
+}
 
-  &.kubernetes {
-    background-color: #326ce5;
-    color: #ffffff;
-  }
+:host.kubernetes {
+  background-color: #e0f2fe; /* Lighter Kubernetes blue */
+  color: #1e40af;
+  border-color: #3b82f6;
+}
 
-  &.docker {
-    background-color: #2496ed;
-    color: #ffffff;
-  }
+:host.docker {
+  background-color: #d1fae5; /* Lighter Docker green */
+  color: #15803d;
+  border-color: #6ee7b7;
+}
 
-  &.spring {
-    background-color: #6db33f;
-    color: #ffffff;
-  }
+:host.spring {
+  background-color: #f0fdf4; /* Lighter Spring green */
+  color: #1a563c;
+  border-color: #86efac;
+}
 
-  &.angular {
-    background-color: #dd0031;
-    color: #ffffff;
-  }
+:host.angular {
+  background-color: #fce7f3; /* Lighter Angular red */
+  color: #9f1239;
+  border-color: #f472b6;
 }
 
 /* Dark Mode */
-.dark {
-  :host {
-    background-color: #334155;
-    color: #f8fafc;
+.dark :host {
+  background-color: #374151; /* Darker background */
+  color: #d1d5db; /* Lighter text */
+}
 
-    /* Override default in dark mode */
-    &.aws, &.gcp, &.kubernetes, &.docker, &.spring, &.angular {
-      color: #ffffff;
-    }
-  }
+.dark :host.aws,
+.dark :host.gcp,
+.dark :host.kubernetes,
+.dark :host.docker,
+.dark :host.spring,
+.dark :host.angular {
+  color: #e5e7eb; /* Lighter text in dark mode */
 }

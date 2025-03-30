@@ -28,7 +28,8 @@ export class NavbarComponent {
     { path: '/', label: 'Home' },
     { path: '/projects', label: 'Projects' },
     { path: '/experience', label: 'Experience' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/contact', label: 'Contact' },
+    {path: '/skills' , label: 'Skills'}
   ];
 
   @HostListener('window:resize', ['$event'])
