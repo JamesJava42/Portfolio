@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://github.com/JamesJava42/Portfolio.git',
+  basePath: 'C:/Program Files/Git/Portfolio',
   supportedLocales: {
   "en-US": ""
 },

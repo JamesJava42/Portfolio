@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/JamesJava42/Portfolio.git": {},
-    "/JamesJava42/Portfolio.git/contact": {},
-    "/JamesJava42/Portfolio.git/education": {},
-    "/JamesJava42/Portfolio.git/experience": {},
-    "/JamesJava42/Portfolio.git/projects": {},
-    "/JamesJava42/Portfolio.git/skills": {}
+    "/Program%20Files/Git/Portfolio": {},
+    "/Program%20Files/Git/Portfolio/contact": {},
+    "/Program%20Files/Git/Portfolio/education": {},
+    "/Program%20Files/Git/Portfolio/experience": {},
+    "/Program%20Files/Git/Portfolio/projects": {},
+    "/Program%20Files/Git/Portfolio/skills": {}
   }
 }
