@@ -19,7 +19,7 @@
         "Automated deployment workflows using CI/CD pipelines with Jenkins and Bitbucket, ensuring continuous integration and streamlined updates."
       ],
       "techStack": ["Java", "Spring Boot", "AWS", "Docker", "Kubernetes", "CI/CD", "GCP"],
-      "githubLink": "https://github.com/JamesJava42/microservices-ecommerce",
+      "githubLink": "https://github.com/JamesJava42",
       "demoLink": "https://ecommerce-demo.com"
     },
     {
@@ -31,7 +31,7 @@
         "Developed and managed RESTful APIs for reliable communication between services, ensuring efficient data exchange and scalability."
       ],
       "techStack": ["Java", "Spring Boot", "Docker", "Kubernetes", "AWS", "JWT", "JPA"],
-      "githubLink": "https://github.com/JamesJava42/inventory-management",
+      "githubLink": "https://github.com/JamesJava42",
       "demoLink": "https://inventory-demo.com"
     }
   ],
@@ -63,14 +63,14 @@
     }
   ],
   "skills": {
-    "cloudPlatforms": ["AWS (EC2, S3, Lambda, CloudFormation, Elastic Beanstalk, CloudWatch)", "GCP (Cloud Pub/Sub, Firestore)", "RDS"],
-    "developmentPractices": ["Agile", "Scrum", "DevOps", "CI/CD Tools", "TDD"],
-    "programmingLanguages": ["Java", "JavaScript", "Python", "C", "C++"],
-    "frameworksDBMS": ["Spring Boot", "AngularJS", "Spring Security", "Node.js", "MySQL", "MongoDB", "PostgreSQL", "Redis (caching)", "Elasticsearch (search indexing)"],
-    "containerization": ["Docker", "Kubernetes", "Helm", "OpenShift"],
-    "testingTools": ["Selenium", "Cucumber", "Postman", "Junit", "Mockito", "SonarQube"],
-    "apiDevelopment": ["RESTful APIs", "Swagger Documentation"],
-    "messageBrokering": ["Apache Kafka", "RabbitMQ", "Amazon SQS"]
+    "CloudPlatforms": ["AWS (EC2, S3, Lambda, CloudFormation, Elastic Beanstalk, CloudWatch)", "GCP (Cloud Pub/Sub, Firestore)", "RDS"],
+    "DevelopmentPractices": ["Agile", "Scrum", "DevOps", "CI/CD Tools", "TDD"],
+    "ProgrammingLanguages": ["Java", "JavaScript", "Python", "C", "C++"],
+    "FrameworksDBMS": ["Spring Boot", "AngularJS", "Spring Security", "Node.js", "MySQL", "MongoDB", "PostgreSQL", "Redis (caching)", "Elasticsearch (search indexing)"],
+    "Containerization": ["Docker", "Kubernetes", "Helm", "OpenShift"],
+    "TestingTools": ["Selenium", "Cucumber", "Postman", "Junit", "Mockito", "SonarQube"],
+    "ApiDevelopment": ["RESTful APIs", "Swagger Documentation"],
+    "MessageBrokering": ["Apache Kafka", "RabbitMQ", "Amazon SQS"]
   },
   "education": {
     "degree": "MS Computer Science",

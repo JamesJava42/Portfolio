@@ -1,13 +1,13 @@
 <section class="skills-section">
-    <h2 class="section-title">Technical Skills</h2>
-    
-    <div *ngFor="let category of skillCategories$ | async" class="skill-category">
-      <h3 class="category-title">{{ category }}</h3>
-      <div class="skills-grid">
-        <app-skill-chip 
-          *ngFor="let skill of (skills$ | async)?.[category]" 
-          [skill]="skill">
-        </app-skill-chip>
-      </div>
+  <h2 class="section-title">Technical Skills</h2>
+  
+  <div *ngFor="let category of skillCategories$ | async" class="skill-category">
+    <h3 class="category-title">{{ category }}</h3>
+    <div class="skills-grid">
+      <app-skill-chip 
+        *ngFor="let skill of (skills$ | async)?.[category]" 
+        [skill]="skill">
+      </app-skill-chip>
     </div>
-  </section>
+  </div>
+</section>

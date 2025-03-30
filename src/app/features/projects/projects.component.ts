@@ -1,17 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
 import { Observable, of } from 'rxjs';
-
-interface Project {
-  title: string;
-  description: string;
-  link: string;
-  technologies: string[];
-}
+import { ResumeService, Project } from '../../core/services/resume.service'; // Adjust the path
 
 @Component({
   selector: 'app-projects',
@@ -26,25 +20,14 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
-  projects$: Observable<Project[]> = of([
-    {
-      title: 'Angular Portfolio',
-      description: 'A modern and responsive personal portfolio built with Angular and Tailwind CSS.',
-      link: 'https://your-portfolio-link.com',
-      technologies: ['Angular', 'Tailwind CSS', 'TypeScript', 'Firebase']
-    },
-    {
-      title: 'E-commerce App',
-      description: 'A high-performance e-commerce web app with real-time features.',
-      link: 'https://your-ecommerce-app.com',
-      technologies: ['React', 'Redux', 'Node.js', 'MongoDB']
-    },
-    {
-      title: 'ML Dashboard',
-      description: 'A dashboard visualizing ML models and performance metrics.',
-      link: 'https://your-ml-dashboard.com',
-      technologies: ['Python', 'TensorFlow', 'Flask', 'D3.js']
-    }
-  ]);
+export class ProjectsComponent implements OnInit {
+  projects$: Observable<Project[]> | undefined;
+
+  constructor(private resumeService: ResumeService) { }
+
+  ngOnInit(): void {
+    this.resumeService.getResumeData().subscribe(resume => {
+      this.projects$ = of(resume.projects);
+    });
+  }
 }

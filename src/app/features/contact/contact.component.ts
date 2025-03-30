@@ -35,7 +35,10 @@ export class ContactComponent implements OnInit {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
+      const { name, email, message } = this.contactForm.value;
+      const mailtoLink = `mailto:jamesreddy1505@gmail.com?subject=Contact Form Submission from ${name}&body=${encodeURIComponent(message)}%0A%0AReply to: ${email}`;
+      
+      window.location.href = mailtoLink;
     }
   }
 }

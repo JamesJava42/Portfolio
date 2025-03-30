@@ -1,61 +1,81 @@
+/* src/app/features/skills/skills.component.scss */
 .skills-section {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #2d3748;
+  padding: 2.5rem; /* Increased padding */
+  max-width: 1200px;
+  margin: 2rem auto; /* Added margin */
+  background-color: #f9fafb; /* Lighter background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem; /* Increased font size */
+    margin-bottom: 2.5rem; /* Increased margin */
+    color: #1a202c; /* Darker title color */
+    font-weight: 600; /* Bolder font */
+  }
+
+  .skill-category {
+    margin-bottom: 2.5rem; /* Increased margin */
+
+    .category-title {
+      font-size: 1.4rem; /* Increased font size */
+      margin-bottom: 1.2rem; /* Increased margin */
+      color: #374151; /* Darker category title color */
+      font-weight: 600;
+      border-bottom: 2px solid #e2e8f0; /* Added bottom border */
+      padding-bottom: 0.8rem; /* Added padding */
     }
-  
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem; /* Increased gap */
+      justify-content: flex-start; /* Aligned to start */
+    }
+  }
+}
+
+/* Dark Mode */
+.dark {
+  .skills-section {
+    background-color: #1e293b; /* Darker background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow */
+
+    .section-title {
+      color: #e5e7eb; /* Lighter title color */
+    }
+
+    .skill-category {
+      .category-title {
+        color: #d1d5db; /* Lighter category title color */
+        border-bottom-color: #374151; /* Darker border color */
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 1.5rem;
+
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 2rem;
+    }
+
     .skill-category {
       margin-bottom: 2rem;
-  
+
       .category-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
-        color: #4a5568;
-        font-weight: 600;
       }
-  
+
       .skills-grid {
-        display: flex;
-        flex-wrap: wrap;
         gap: 0.5rem;
       }
     }
   }
-  
-  /* Dark Mode */
-  .dark {
-    .skills-section {
-      .section-title {
-        color: #f7fafc;
-      }
-  
-      .skill-category {
-        .category-title {
-          color: #cbd5e0;
-        }
-      }
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .skills-section {
-      padding: 1rem;
-  
-      .section-title {
-        font-size: 1.75rem;
-      }
-  
-      .skill-category {
-        .category-title {
-          font-size: 1.1rem;
-        }
-      }
-    }
-  }
+}
