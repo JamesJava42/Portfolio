@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject,PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map, retry } from 'rxjs/operators';
+import { catchError, retry } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface PersonalInformation {
   name: string;
@@ -14,7 +15,7 @@ export interface PersonalInformation {
 export interface Project {
   name: string;
   description: string[];
-  techStack?: string[]; // Can be an array or undefined
+  techStack?: string[];
   githubLink?: string;
   demoLink?: string;
 }
@@ -46,12 +47,28 @@ export interface Resume {
 export class ResumeService {
   private readonly DATA_URL = 'assets/data/resume-data.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   getResumeData(): Observable<Resume> {
+    // Ensure data fetching only happens in the browser
+    if (!isPlatformBrowser(this.platformId)) {
+      console.warn('Skipping resume data fetch during SSR');
+      return of({
+        personalInformation: { name: '', email: '', linkedin: '', github: '', website: '' },
+        aboutMe: '',
+        projects: [],
+        experience: [],
+        skills: {},
+        education: { degree: '', university: '', gpa: '', duration: '' },
+        certifications: []
+      });
+    }
+
     return this.http.get<Resume>(this.DATA_URL).pipe(
       retry(3), // Retries the request 3 times in case of a transient error
-      map(data => this.validateResume(data)),
       catchError(error => {
         console.error('Error loading resume data:', error);
         return of({
@@ -65,24 +82,5 @@ export class ResumeService {
         });
       })
     );
-  }
-
-  private validateResume(data: unknown): Resume {
-    const requiredKeys = [
-      'personalInformation',
-      'aboutMe',
-      'projects',
-      'experience',
-      'skills',
-      'education',
-      'certifications'
-    ];
-
-    if (!data || typeof data !== 'object' || !requiredKeys.every(key => key in data)) {
-      console.error('Invalid resume data structure');
-      throw new Error('Invalid resume data structure');
-    }
-
-    return data as Resume;
   }
 }
